@@ -1,0 +1,30 @@
+<form [formGroup]="form" (ngSubmit)="onSubmit()">
+
+    <h4>From Type</h4>
+
+    <select class="dropdown" formControlName="fromType">
+        <option *ngFor="let option of fromTypes"
+                [value]="option.value">{{ option.name }}
+        </option>
+    </select>
+
+    <h4>To Type</h4>
+
+    <select class="dropdown" formControlName="toType">
+        <option *ngFor="let option of toTypes" [value]="option.value">{{ option.name }}
+        </option>
+    </select>
+
+    <h4>Value</h4>
+    <input class="input" formControlName="value" type="text">
+
+    <button class="btn" type="submit">Convert</button>
+</form>
+
+
+<h1>Result: <span *ngIf="result$ | async as result"> {{ result }}</span></h1>
+
+
+
+
+
