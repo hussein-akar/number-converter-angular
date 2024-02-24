@@ -1,24 +1,33 @@
 <form [formGroup]="form" (ngSubmit)="onSubmit()">
+    <div class="container">
 
-    <h4>From Type</h4>
+        <div>
+            <h4>From Type</h4>
 
-    <select class="dropdown" formControlName="fromType">
-        <option *ngFor="let option of fromTypes"
-                [value]="option.value">{{ option.name }}
-        </option>
-    </select>
+            <select class="dropdown" formControlName="fromType">
+                <option *ngFor="let option of fromTypes"
+                        [value]="option.value">{{ option.value }}
+                </option>
+            </select>
+        </div>
 
-    <h4>To Type</h4>
+        <div>
+            <h4>To Type</h4>
 
-    <select class="dropdown" formControlName="toType">
-        <option *ngFor="let option of toTypes" [value]="option.value">{{ option.name }}
-        </option>
-    </select>
+            <select class="dropdown" formControlName="toType">
+                <option *ngFor="let option of toTypes" [value]="option.value">{{ option.value }}
+                </option>
+            </select>
+        </div>
 
-    <h4>Value</h4>
-    <input class="input" formControlName="value" type="text">
+        <div>
+            <h4>Value</h4>
+            <input class="input" formControlName="value" type="text">
 
-    <button class="btn" type="submit">Convert</button>
+        </div>
+
+        <button class="btn" type="submit">Convert</button>
+    </div>
 </form>
 
 
